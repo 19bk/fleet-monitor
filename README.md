@@ -6,6 +6,8 @@ Built to show applied ML, telemetry simulation, product-minded dashboard design,
 
 ![fleet-monitor demo](docs/demo.gif)
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/19bk/fleet-monitor)
+
 ## Elevator Pitch
 
 I built `fleet-monitor` as a compact flagship project that looks credible to IoT, data, and automation teams.
