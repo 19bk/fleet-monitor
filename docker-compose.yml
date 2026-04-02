@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID:-}
+

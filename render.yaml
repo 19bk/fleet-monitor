@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: fleet-monitor
+    env: python
+    plan: starter
+    buildCommand: pip install -U pip setuptools wheel && pip install -e '.[viz,ml]'
+    startCommand: python scripts/seed_history.py && streamlit run src/fleet_monitor/dashboard/app.py --server.address 0.0.0.0 --server.port $PORT
+    autoDeploy: true

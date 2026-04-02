@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fleet-monitor"
+version = "0.1.0"
+description = "Predictive maintenance dashboard for IoT device fleets."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "Bernard"}
+]
+dependencies = [
+  "joblib>=1.4",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "plotly>=5.24",
+  "requests>=2.32",
+  "scikit-learn>=1.5",
+  "streamlit>=1.39",
+]
+
+[project.optional-dependencies]
+viz = [
+  "folium>=0.17",
+  "streamlit-folium>=0.22",
+]
+ml = [
+  "shap>=0.46",
+  "xgboost>=2.1",
+]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.6",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

@@ -1,0 +1,12 @@
+.venv/
+.venv-core/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+artifacts/
+data/fleet_monitor.db
+src/*.egg-info/
+src/fleet_monitor.egg-info/
+
